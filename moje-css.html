@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta chatset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="body">
+    <br>
+    <span class="side-move">
+        <a href="#far" class="rainbow">
+            daleka sekcja
+        </a>
+    </span>
+    <br>
+    <span class="side-move">
+        <b id="nazwa" class="tyt"></b>
+    </span>
+    <br>
+    <br>
+    <br>
+    <span class="side-move">
+        <span class="rainbow">
+            text na 2 class
+        </span>
+    </span>
+    <br>
+    <br>
+    <br>
+    <span class="side-move">
+        <span class="red-blue">
+            niggerek
+        </span>
+    </span>
+    <h1 class="side-move2">
+        balz
+    </h1>
+    <button class="color-button side-move2">
+        elo
+    </button>
+    <br>
+    <p>
+        <h2>
+            elo
+        </h2>
+    </p>
+    <span class="side-move">
+        <span class="rainbow">
+            tęcza
+        </span>
+    </span>
+    <br>
+    <br>
+    <span class="side-move">
+        <span class="moving-gradient">
+            gradient!!!
+        </span>
+    </span>
+    <br>
+    <br>
+    <span class="shake">
+        shake
+    </span>
+    <br>
+    <br>
+    <div class="div1 shake2">
+        div-box
+    </div>
+    <div class="div-rotator">
+        div-idi
+    </div>
+    <br>
+    <br>
+    <div class="boxer">
+        boxer
+    </div>
+    <br>
+    <br>
+    <div class="color-mix-hiverer">
+        kolorki
+    </div>
+    <br>
+    <br>
+    <div class="just-flip">
+        just flip
+    </div>
+    <br>
+    <br>
+    <input type="text">
+    <input type="submit" onclick="save()">
+    <br>
+    <br>
+    <span id="savedtext"></span>
+    <br>
+    <br>
+    <div class="triangle">
+        TRUJKĄT
+    </div>
+    <br>
+    <br>
+    <svg class="tri-svg" width="100" height="100">
+        <polygon points="50,0 100,100 0,100"/>
+    </svg>
+    <br>
+    <br>
+    <img src="man.gif" class="small-img-man side-move2">
+    <br>
+    <br>
+    <video src="test.mp4" class="small-video" autoplay muted controls>
+    </video>
+    <br>
+    <br>
+    <audio src="O_kur.mp3" controls>
+    </audio>
+    <br>
+    <br>
+    <button class="red side-move2">
+        elo
+    </button>
+    <span class="big">
+        <h1 id="h"></h1>
+    </span>
+    <section class="far-marg" id="far">
+        <span class="side-move">
+            <span class="rainbow">
+                miał?
+            </span>
+        </span>
+    </section>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .small-video {
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+        }
+        .big {
+            color: red;
+            font-size: 12px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .big:hover {
+            color: red;
+            font-size: 16px
+        }
+        .side-move {
+            margin-left: 2px;
+            transition: margin 0.5s ease;
+            transform: translateX(0);
+        }
+        .side-move:hover {
+            margin-left: 12px;
+            transform: translateX(12px);
+        }
+        .side-move2 {
+            margin-left: 2px;
+            transition: margin 0.5s ease;
+        }
+        .side-move2:hover {
+            margin-left: 12px;
+        }
+        .body {
+            background: linear-gradient(62deg, red, blue, green, white, orange);
+        }
+        .color-button {
+            background: linear-gradient(45deg, red, green, blue);
+            color: white;
+        }
+        .small-img-man {
+            width: 100px;
+            height: 100px;
+        }
+        h2 {
+            font-size: 24px;
+            transition: font-size 3s ease;
+            color: red;
+        }
+        h2:hover {
+            color: white;
+            font-size: 36px;
+        }
+        .tri-svg {
+            background-color: yellow;
+            border: 4px solid orange;
+            border-radius: 4px;
+        }
+        .triangle {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            border: 4px solid orange;
+            border-radius: 6px;
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+        .just-flip2 {}
+        .just-flip2:hover {
+            animation: flip2 0.2s ease;
+        }
+@keyframes flip2 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+        .just-flip {
+            color: red;
+            background-color: black;
+            border: 3px solid white;
+            width: 45px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        .just-flip:hover {
+            animation: flip-anim 0.2s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+@keyframes flip-anim {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(180deg);
+            }
+        }
+        .color-mix-hiverer {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: darkblue solid 8px;
+            border-radius: 4px;
+            margin: 20px;
+            font-size: 32px;
+            font-family: 'Georgia';
+            text-align: center;
+            padding: 20px;
+            padding-top: 50px;
+        }
+        .color-mix-hiverer:hover {
+            animation: color-mix-anim 1.5s infinite ease;
+            transition: background-color;
+        }
+@keyframes color-mix-anim {
+            0% {
+                background-color: red;
+            }
+            25% {
+                background-color: yellow;
+            }
+            50% {
+                background-color: green;
+            }
+            75% {
+                background-color: blue;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            padding: 10px;
+            font-size: 30px;
+            border: 10px solid gray;
+            border-radius: 16px;
+            text-align: center;
+            font-family: 'Georgia';
+        }
+        .red {
+            background: red;
+            color: white;
+        }
+        .tyt {
+            color: blue;
+            font-size: 96px;
+        }
+        .boxer {
+            width: 150px;
+            height: 100px;
+            background-color: #A4FF00;
+            border: 5px solid #00B309;
+            border-radius: 12px;
+            margin-left: 35px;
+            text-align: center;
+            padding: 35px;
+            font-size: 35px;
+        }
+        .boxer:hover {
+            animation: boxer-anim 0.5s ease-in-out infinite;
+        }
+@keyframes boxer-anim {
+            10% {
+                margin-left: 30px;
+                border: 5px solid red;
+                background-color: pink;
+            }
+            20% {
+                margin-left: 39px;
+                border: 5px solid blue;
+                background-color: lightblue;
+            }
+            30% {
+                margin-left: 31px;
+                border: 5px solid orange;
+                background-color: yellow;
+            }
+            40% {
+                margin-left: 38px;
+                border: 5px solid black;
+                background-color: darkgray;
+            }
+            50% {
+                margin-left: 32px;
+                border: 5px solid white;
+                background-color: lightgray;
+            }
+            60% {
+                margin-left: 37px;
+                border: 5px solid darkgreen;
+                background-color: green;
+            }
+            70% {
+                margin-left: 33px;
+                border: 5px solid darkviolet;
+                background-color: violet;
+            }
+            80% {
+                margin-left: 36px;
+                border: 5px solid pink;
+                background-color: red;
+            }
+            90% {
+                margin-left: 34px;
+                border: 5px solid blue;
+                background-color: red;
+            }
+            100% {
+                margin-left: 35px;
+                border: 5px solid #00B309;
+                background-color: #A4FF00;
+            }
+        }
+        .div-rotator {
+            width: 100px;
+            height: 100px;
+            margin: 25px;
+            background-color: pink;
+            border: 10px solid red;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 50px;
+            padding: 20px;
+        }
+        .div-rotator:hover {
+            animation: div-rotator 0.3s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+@keyframes div-rotator {
+            form {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .shake {
+            color: white;
+            background: linear-gradient(180deg, red, green);
+            margin-left: 25px;
+            font-size: 35px;
+            padding: 12px;
+        }
+        .shake:hover {
+            animation: shake-anim 0.5s;
+            transition: margin;
+        }
+@keyframes shake-anim {
+            10% {
+                margin-left: 20px;
+            }
+            20% {
+                margin-left: 29px;
+            }
+            30% {
+                margin-left: 21px;
+            }
+            40% {
+                margin-left: 28px;
+            }
+            50% {
+                margin-left: 22px;
+            }
+            60% {
+                margin-left: 27px;
+            }
+            70% {
+                margin-left: 23px;
+            }
+            80% {
+                margin-left: 26px;
+            }
+            90% {
+                margin-left: 24px;
+            }
+            100% {
+                margin-left: 25px;
+            }
+        }
+        .shake2 {
+            margin-left: 25px;
+        }
+        .shake2:hover {
+            animation: shake-anim2 0.5s;
+            transition: margin;
+        }
+@keyframes shake-anim2 {
+            10% {
+                margin-left: 20px;
+            }
+            20% {
+                margin-left: 29px;
+            }
+            30% {
+                margin-left: 21px;
+            }
+            40% {
+                margin-left: 28px;
+            }
+            50% {
+                margin-left: 22px;
+            }
+            60% {
+                margin-left: 27px;
+            }
+            70% {
+                margin-left: 23px;
+            }
+            80% {
+                margin-left: 26px;
+            }
+            90% {
+                margin-left: 24px;
+            }
+            100% {
+                margin-left: 25px;
+            }
+        }
+        .far-marg {
+            margin-top: 1000px;
+            margin-bottom: 10px;
+        }
+        .moving-gradient {
+            border-radius: 6px;
+            font-size: 16px
+            color: white;
+            animation: moving-gradient 5s infinite;
+            transition: background 3d ease;
+        }
+@keyframes moving-gradient {
+            0% {
+                background: linear-gradient(45deg, red, blue);
+            }
+            20% {
+                background: linear-gradient(45deg, blue, green);
+            }
+            40% {
+                background: linear-gradient(45deg, green, yellow);
+            }
+            60% {
+                background: linear-gradient(45deg, yellow, violet);
+            }
+            80% {
+                background: linear-gradient(45deg, violet, pink);
+            }
+            100% {
+                background: linear-gradient(45deg, pink, red);
+            }
+        }
+        .red-blue {
+            padding-bottom: 40px
+            padding-top: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 16px
+            border: none;
+            border-radius: 18px;
+            color: white;
+            animation: red-blue 6s infinite;
+            transition: background-color 3d ease-in-out;
+        }
+@keyframes red-blue {
+            0% {
+                background-color: red;
+            }
+            50% {
+                background-color: blue;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+        .rainbow {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: position;
+            animation: rainbowColors 7s infinite;
+            transition: background-color 1s ease-in-out;
+        }
+
+@keyframes rainbowColors {
+            0% {
+                background-color: red;
+            }
+            14% {
+                background-color: orange;
+            }
+            28% {
+                background-color: yellow;
+                color: black;
+            }
+            42% {
+                background-color: green;
+                color: white;
+            }
+            57% {
+                background-color: blue;
+            }
+            71% {
+                background-color: indigo;
+            }
+            85% {
+                background-color: violet;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+    </style>
+    <script>
+        let save = " ";
+        
+        function save() {
+            const inputElement = document.getElementById("myInput")
+            save = inputElement.value;
+            document.getElementById("savedtext").innterText = save;
+            location.reload();
+        }
+        const k = prompt("dawaj dane: ")
+        console.log(k)
+        console.log("hello");
+        document.getElementById("h").textContent = prompt("dasz jeszcze dane?:")
+        document.getElementById("nazwa").textContent = prompt("teraz jak nazywasz str:")
+    </script>
+</body>
+</html>
